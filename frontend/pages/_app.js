@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "../lib/theme";
+import Container from "@material-ui/core/Container";
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
@@ -18,7 +19,9 @@ export default function MyApp(props) {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Component {...pageProps} />
+        <Container maxWidth="lg">
+          <Component {...pageProps} />
+        </Container>
       </ThemeProvider>
     </>
   );
