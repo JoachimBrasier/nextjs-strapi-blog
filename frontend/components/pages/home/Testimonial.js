@@ -40,7 +40,11 @@ export default ({ data }) => {
                 }
                 title={testimonial.author}
                 subheader={
-                  <Rating value={testimonial.rate} readOnly size="small" />
+                  <Rating
+                    value={Number(testimonial.rate)}
+                    readOnly
+                    size="small"
+                  />
                 }
               />
               <CardContent style={{ paddingTop: 0 }}>
