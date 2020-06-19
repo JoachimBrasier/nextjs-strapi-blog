@@ -9,7 +9,7 @@ const Home = ({ testimonials }) => (
 );
 
 Home.getInitialProps = async () => {
-  const testimonials = await fetch("get", "testimonials");
+  const testimonials = await fetch("get", "testimonials?_limit=3");
   return { testimonials };
 };
 
