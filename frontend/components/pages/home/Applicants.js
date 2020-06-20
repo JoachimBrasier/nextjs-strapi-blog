@@ -39,7 +39,7 @@ export default ({ data }) => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Link href={`/candidat/${applicant._id}`}>
+                <Link href={`/candidats/${applicant._id}`}>
                   <Button variant="contained" color="primary" fullWidth>
                     En savoir plus
                   </Button>
