@@ -4,6 +4,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "../lib/theme";
 import Container from "@material-ui/core/Container";
+import Navbar from "../components/layout/Navbar";
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
@@ -19,6 +20,7 @@ export default function MyApp(props) {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+        <Navbar />
         <Container maxWidth="lg">
           <Component {...pageProps} />
         </Container>
