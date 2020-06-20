@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Training",
+  "info": {
+    "name": "Training"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "job_title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "applicants": {
+      "via": "training",
+      "collection": "applicant"
+    }
+  }
+}

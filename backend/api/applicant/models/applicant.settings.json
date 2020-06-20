@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Applicant",
+  "info": {
+    "name": "Applicant"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "full_name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "curriculum": {
+      "type": "richtext",
+      "required": true
+    },
+    "available": {
+      "type": "boolean",
+      "default": true,
+      "private": false,
+      "required": true
+    },
+    "training": {
+      "model": "training",
+      "via": "applicants"
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 150
+    }
+  }
+}
