@@ -76,6 +76,7 @@ const Applicant = ({ applicant }) => {
                     display="flex"
                     alignItems="center"
                     style={{ margin: "5px 0" }}
+                    key={skill._id}
                   >
                     <Box width={24}>
                       <Avatar
@@ -86,7 +87,7 @@ const Applicant = ({ applicant }) => {
                     </Box>
                     <Box width="100%" ml={1}>
                       <LinearProgress
-                        value={skill.level}
+                        value={Number(skill.level)}
                         variant="determinate"
                       />
                     </Box>
