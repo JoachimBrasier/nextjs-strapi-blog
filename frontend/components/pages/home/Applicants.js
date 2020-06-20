@@ -49,6 +49,19 @@ export default ({ data }) => {
           </Grid>
         ))}
       </Grid>
+      <Grid
+        container
+        alignItems="flex-start"
+        justify="flex-end"
+        direction="row"
+        style={{ marginTop: 20 }}
+      >
+        <Link href="/candidats">
+          <Button variant="contained" color="primary">
+            Voir tous les candidats
+          </Button>
+        </Link>
+      </Grid>
     </section>
   );
 };
