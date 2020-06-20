@@ -14,7 +14,7 @@ export default ({ data }) => {
   return (
     <section>
       <Typography variant="h5" align="center" style={{ padding: "20px 0" }}>
-        Candidats
+        Les derniers candidats inscrits
       </Typography>
       <Grid container spacing={3}>
         {data.map((applicant) => (
