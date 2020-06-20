@@ -6,6 +6,9 @@ import {
   CardContent,
   CardMedia,
   makeStyles,
+  LinearProgress,
+  Box,
+  Avatar,
 } from "@material-ui/core";
 import { green } from "@material-ui/core/colors";
 import ReactMarkdown from "react-markdown";
@@ -18,6 +21,10 @@ const useStyles = makeStyles((theme) => ({
   },
   iconMargin: {
     marginRight: 5,
+  },
+  logo: {
+    maxWidth: 24,
+    maxHeight: 24,
   },
 }));
 
@@ -62,6 +69,31 @@ const Applicant = ({ applicant }) => {
               <Room className={classes.iconMargin} />
               {applicant.location}
             </Typography>
+            {applicant.skills ? (
+              <div style={{ marginTop: 15 }}>
+                {applicant.skills.map((skill) => (
+                  <Box
+                    display="flex"
+                    alignItems="center"
+                    style={{ margin: "5px 0" }}
+                  >
+                    <Box width={24}>
+                      <Avatar
+                        src={`http://localhost:1337${skill.technology.logo.url}`}
+                        variant="square"
+                        className={classes.logo}
+                      />
+                    </Box>
+                    <Box width="100%" ml={1}>
+                      <LinearProgress
+                        value={skill.level}
+                        variant="determinate"
+                      />
+                    </Box>
+                  </Box>
+                ))}
+              </div>
+            ) : null}
           </CardContent>
         </Card>
       </Grid>

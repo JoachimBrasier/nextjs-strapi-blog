@@ -45,6 +45,11 @@
       "type": "text",
       "required": true,
       "maxLength": 150
+    },
+    "skills": {
+      "type": "component",
+      "repeatable": true,
+      "component": "skills.skills"
     }
   }
 }

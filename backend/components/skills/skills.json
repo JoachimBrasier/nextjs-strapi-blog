@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_skills_skills",
+  "info": {
+    "name": "skills",
+    "icon": "star"
+  },
+  "options": {},
+  "attributes": {
+    "technology": {
+      "model": "technologie"
+    },
+    "level": {
+      "type": "biginteger",
+      "required": true,
+      "max": "100",
+      "min": "1"
+    }
+  }
+}
