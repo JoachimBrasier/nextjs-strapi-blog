@@ -101,7 +101,10 @@ const Applicants = ({ applicants, technologies, trainings }) => {
     <>
       <Input
         value={searchQuery}
-        onChange={(event) => setSearchQuery(event.target.value)}
+        onChange={(event) => {
+          event.persist();
+          setSearchQuery(event.target.value);
+        }}
         onKeyDown={onEnter}
         fullWidth
         placeholder="Rechercher..."
