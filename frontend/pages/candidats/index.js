@@ -142,7 +142,7 @@ const Applicants = ({ applicants, technologies, trainings }) => {
           </Card>
         </Grid>
       </Hidden>
-      <Hidden mdUp>
+      <Hidden lgUp>
         <Fab color="primary" style={fabStyle} onClick={() => setOpen(true)}>
           <FilterList />
         </Fab>
