@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_adresse_adresses",
+  "info": {
+    "name": "Adresse",
+    "icon": "map-marked"
+  },
+  "options": {},
+  "attributes": {
+    "rue": {
+      "type": "string"
+    },
+    "Ville": {
+      "type": "string"
+    }
+  }
+}
